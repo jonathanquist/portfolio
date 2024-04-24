@@ -1,3 +1,9 @@
+'use client';
+
 export default function Home() {
-  return <div>Landing</div>;
+  return (
+    <div>
+      <Home />
+    </div>
+  );
 }
