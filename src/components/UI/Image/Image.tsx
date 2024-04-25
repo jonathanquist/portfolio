@@ -63,7 +63,6 @@ function ImageComponent({
       onError={() => {
         setImageSuccessfullyLoaded(false);
       }}
-      fill
       className={cn(className)}
       {...props}
     />

@@ -1,8 +1,7 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
-import './globals.css';
 import MenuRight from '@/components/Menu/MenuRight/MenuRight';
-import { useRouter } from 'next/navigation';
+
+import './globals.css';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -14,15 +13,13 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const router = useRouter();
-
   return (
     <html lang="en">
       <body>
-        <div className="flex">
-          <div>{children}</div>
+        <div className="flex w-full">
+          <div className="flex-1">{children}</div>
           <div className="w-48">
-            <MenuRight currentPage={router} />
+            <MenuRight />
           </div>
         </div>
       </body>
