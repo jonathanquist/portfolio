@@ -4,33 +4,33 @@ const links = [
   {
     id: 1,
     title: 'Intro',
-    href: '#section1',
+    href: '#intro',
   },
   {
     id: 2,
     title: 'Understanding the user',
-    href: '#section2',
+    href: '#understanding-user',
   },
   {
     id: 3,
     title: 'Starting the design',
-    href: '#section3',
+    href: '#starting-design',
   },
   {
     id: 4,
     title: 'Refining the design',
-    href: '#section4',
+    href: '#refining-design',
   },
   {
     id: 5,
     title: 'Going forward',
-    href: '#section5',
+    href: '#going-forward',
   },
 ];
 
 const Shortcut = () => {
   return (
-    <div>
+    <div className="fixed text-xs">
       <ul>
         {links.map((link) => (
           <li key={link.id}>
