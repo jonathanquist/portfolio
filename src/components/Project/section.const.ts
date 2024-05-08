@@ -1,21 +1,21 @@
 export const getSectionTitle = (name: string) => {
   switch (name) {
-    case 'understandingUser':
+    case 'understanding-user':
       return {
         sectionName: 'Understanding the user',
         bullets: ['User research', 'Pain-points', 'Personas'],
       };
-    case 'startingDesign':
+    case 'starting-design':
       return {
         sectionName: 'Starting the design',
         bullets: ['Wireframes', 'Low-fidelity prototypes', 'Usability studies'],
       };
-    case 'refiningDesign':
+    case 'refining-design':
       return {
         sectionName: 'Refining the design',
         bullets: ['Mockups', 'High-fidelity prototypes', 'Accessibility'],
       };
-    case 'goingForward':
+    case 'going-forward':
       return {
         sectionName: 'Going forward',
         bullets: ['Takeaways', 'What I learned', 'Acknolwedgements'],

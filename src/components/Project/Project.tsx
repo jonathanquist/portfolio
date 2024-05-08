@@ -1,7 +1,9 @@
-import MenuShortcut from '../Menu/MenuShortcut/MenuShortcut';
-import nrk1 from '../../lib/case-study/nrk-1.json';
-import SectionIntro from './SectionIntro';
-import SectionStandard from './SectionStandard';
+"use client";
+
+import MenuShortcut from "../Menu/MenuShortcut/MenuShortcut";
+import nrk1 from "../../lib/case-study/nrk-1.json";
+import SectionIntro from "./SectionIntro";
+import SectionStandard from "./SectionStandard";
 
 const caseStudies = [nrk1];
 
@@ -19,14 +21,14 @@ const Project = ({ slug }: ProjectProps) => {
   }
 
   const {
-    'section-understanding-user': understandingUser,
-    'section-starting-design': startingDesign,
-    'section-refining-design': refiningDesign,
-    'section-going-forward': goingForward,
+    "section-understanding-user": understandingUser,
+    "section-starting-design": startingDesign,
+    "section-refining-design": refiningDesign,
+    "section-going-forward": goingForward,
   } = currentProject;
 
   return (
-    <div className="w-full flex">
+    <div className="flex w-full">
       <div className="w-36">
         <MenuShortcut />
       </div>

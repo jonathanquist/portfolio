@@ -1,6 +1,10 @@
-'use client';
+import About from "@/components/About/About";
+import { Metadata } from "next";
 
-import About from '@/components/About/About';
+export const metadata: Metadata = {
+  title: "About me",
+  description: "A quick introduction to who I am and what I do",
+};
 
 export default function Page() {
   return (

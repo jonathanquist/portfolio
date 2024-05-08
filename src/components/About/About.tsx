@@ -1,17 +1,19 @@
-import { Button, Image, ImageComponent, ImageFallback } from '@/components/UI';
-import Link from 'next/link';
-import { IconLink } from '../Icons';
-import { aboutContent } from './about.const';
+"use client";
+
+import { Button, Image, ImageComponent, ImageFallback } from "@/components/UI";
+import Link from "next/link";
+import { IconLink } from "../Icons";
+import { aboutContent } from "./about.const";
 
 const About = () => {
   return (
     <div>
-      <div className="w-full relative h-12">
-        <Image className="bg-transparent">
+      <div className="relative h-12 w-full">
+        <Image alt="Jonathan Quist" className="bg-transparent">
           <ImageComponent
             src="/images/about.jpeg"
             alt="Me, Jonathan Quist"
-            className="object-cover aspect-auto"
+            className="aspect-auto object-cover"
             sizes="100%"
             fill
           />
@@ -70,7 +72,7 @@ const About = () => {
       <div>
         <Link href="/about">
           <Button className="https://www.figma.com/proto/1TavRYkWcFFXcaGQn6z4cD/Workspace?node-id=1237%3A1806&scaling=contain&page-id=0%3A1&starting-point-node-id=1237%3A1806">
-            View Resume <IconLink className="w-5 h-5" />
+            View Resume <IconLink className="h-5 w-5" />
           </Button>
         </Link>
       </div>
