@@ -1,4 +1,4 @@
-import { Image, ImageComponent, ImageFallback } from '../UI';
+import { Image, ImageComponent, ImageFallback } from "../UI";
 
 type ImageProps = {
   src: string;
@@ -7,11 +7,11 @@ type ImageProps = {
 
 const CaseStudyImage = ({ src, alt }: ImageProps) => (
   <div>
-    <Image>
+    <Image alt={alt}>
       <ImageComponent
         src={src}
         alt={alt}
-        className="object-contain w-full h-auto"
+        className="h-auto w-full object-contain"
         width={0}
         height={0}
         sizes="100vw"

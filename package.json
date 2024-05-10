@@ -4,9 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "npm run generate && next build",
-    "generate": "npx ts-node ./scripts/generate.ts",
-    "start": "next start",
+    "build": "next build",
+    "generate": "pnpm dlx ts-node ./scripts/generate.ts",
+    "start": "next start && pnpm run generate",
     "lint": "next lint"
   },
   "dependencies": {
@@ -24,6 +24,7 @@
     "langchain": "^0.1.36",
     "next": "14.2.2",
     "openai": "^4.42.0",
+    "puppeteer": "^22.8.0",
     "react": "^18",
     "react-dom": "^18",
     "react-markdown": "^9.0.1",
@@ -32,7 +33,7 @@
     "ts-node": "^10.9.2"
   },
   "devDependencies": {
-    "@types/node": "^20",
+    "@types/node": "^20.12.11",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "autoprefixer": "^10.0.1",
@@ -43,7 +44,7 @@
     "prettier": "^3.2.4",
     "prettier-plugin-tailwindcss": "^0.5.11",
     "tailwindcss": "^3.4.1",
-    "typescript": "^5"
+    "typescript": "^5.4.5"
   },
   "overrides": {
     "@langchain/core": "0.1.62",

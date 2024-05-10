@@ -1,6 +1,6 @@
-import React from 'react';
-import { Image, ImageComponent, ImageFallback } from '../UI';
-import { CaseStudyProps } from './Project';
+import React from "react";
+import { Image, ImageComponent, ImageFallback } from "../UI";
+import { CaseStudyProps } from "./Project";
 
 interface IntroProps {
   json: CaseStudyProps;
@@ -10,14 +10,14 @@ const SectionIntro = ({ json }: IntroProps) => {
   const {
     slug,
     title,
-    'img-hero': imgHero,
-    'section-intro': sectionIntro,
+    "img-hero": imgHero,
+    "section-intro": sectionIntro,
   } = json;
   const {
     what,
     why,
     how,
-    'intro-text': introText,
+    "intro-text": introText,
     hypothesis,
     role,
   } = sectionIntro;
@@ -43,11 +43,11 @@ const SectionIntro = ({ json }: IntroProps) => {
         </div>
       </div>
       <div className="px-64">
-        <Image>
+        <Image alt={title}>
           <ImageComponent
             src={imgHero}
-            alt={slug}
-            className="object-contain w-full h-auto"
+            alt={title}
+            className="h-auto w-full object-contain"
             width={0}
             height={0}
             sizes="100vw"
