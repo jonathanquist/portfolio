@@ -68,9 +68,36 @@
 
 @layer base {
   * {
-    @apply border-border;
+    @apply border-border font-myriad;
   }
   body {
     @apply bg-background text-foreground;
+  }
+
+  /* Scroll */
+  body::-webkit-scrollbar,
+  textarea::-webkit-scrollbar,
+  .custom-scroll::-webkit-scrollbar {
+    @apply h-2.5 w-2.5;
+  }
+  body::-webkit-scrollbar-track,
+  textarea::-webkit-scrollbar-track,
+  .custom-scroll::-webkit-scrollbar-track {
+    @apply bg-background;
+  }
+  body::-webkit-scrollbar-thumb,
+  textarea::-webkit-scrollbar-thumb,
+  .custom-scroll::-webkit-scrollbar-thumb {
+    @apply rounded-md border-2 border-solid border-background bg-muted;
+  }
+}
+
+@-moz-document url-prefix() {
+  html,
+  textarea,
+  .custom-scroll {
+    scrollbar-width: thin;
+    scrollbar-color: theme("colors.muted.DEFAULT") theme("colors.background");
+    scrollbar-gutter: 1rem;
   }
 }

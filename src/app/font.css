@@ -1,0 +1,23 @@
+@font-face {
+  font-family: "Myriad Condensed";
+  src: url("/fonts/MYRIADPRO-COND.OTF") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Myriad Condensed";
+  src: url("/fonts/MYRIADPRO-BOLDCOND.OTF") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Caviar Dream";
+  src: url("/fonts/CAVIARDREAMS.TTF") format("ttf");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import MenuRight from "@/components/Menu/MenuRight/MenuRight";
 
+import "./font.css";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -19,9 +20,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <div className="flex w-full">
+        <div className="custom-scroll flex w-full overflow-y-scroll">
           <div className="flex-1">{children}</div>
-          <div className="w-48">
+          <div className="sticky top-0">
             <MenuRight />
           </div>
         </div>
