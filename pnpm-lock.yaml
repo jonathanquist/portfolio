@@ -5,6 +5,7 @@ specifiers:
   '@langchain/community': ^0.0.20
   '@langchain/core': 0.1.62
   '@langchain/openai': ^0.0.13
+  '@radix-ui/react-separator': ^1.0.3
   '@radix-ui/react-slot': ^1.0.2
   '@radix-ui/react-tooltip': ^1.0.7
   '@types/node': ^20.12.11
@@ -40,6 +41,7 @@ dependencies:
   '@langchain/community': 0.0.20_nuldnean6crb5n6sizm2rf5nqe
   '@langchain/core': 0.1.62_openai@4.42.0
   '@langchain/openai': 0.0.13
+  '@radix-ui/react-separator': 1.0.3_iv3fbzfqanoonyhoyrhhflyvgy
   '@radix-ui/react-slot': 1.0.2_omxgp22l5i4odgutx2pskcopxu
   '@radix-ui/react-tooltip': 1.0.7_iv3fbzfqanoonyhoyrhhflyvgy
   '@upstash/redis': 1.30.1
@@ -1231,6 +1233,27 @@ packages:
     dependencies:
       '@babel/runtime': 7.24.5
       '@radix-ui/react-slot': 1.0.2_omxgp22l5i4odgutx2pskcopxu
+      '@types/react': 18.3.1
+      '@types/react-dom': 18.3.0
+      react: 18.3.1
+      react-dom: 18.3.1_react@18.3.1
+    dev: false
+
+  /@radix-ui/react-separator/1.0.3_iv3fbzfqanoonyhoyrhhflyvgy:
+    resolution: {integrity: sha512-itYmTy/kokS21aiV5+Z56MZB54KrhPgn6eHDKkFeOLR34HMN2s8PaN47qZZAGnvupcjxHaFZnW4pQEh0BvvVuw==}
+    peerDependencies:
+      '@types/react': '*'
+      '@types/react-dom': '*'
+      react: ^16.8 || ^17.0 || ^18.0
+      react-dom: ^16.8 || ^17.0 || ^18.0
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+      '@types/react-dom':
+        optional: true
+    dependencies:
+      '@babel/runtime': 7.24.5
+      '@radix-ui/react-primitive': 1.0.3_iv3fbzfqanoonyhoyrhhflyvgy
       '@types/react': 18.3.1
       '@types/react-dom': 18.3.0
       react: 18.3.1

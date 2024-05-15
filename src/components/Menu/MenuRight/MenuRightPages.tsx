@@ -15,10 +15,10 @@ const MenuRightPages = () => {
             <Link
               href={page.path}
               className={cn(
-                "block w-20 rounded-md px-2 py-1 font-bold uppercase transition",
+                "block w-24 rounded-md border-2 border-dashed px-3 py-1 text-lg font-bold uppercase tracking-wider transition",
                 path === page.path
-                  ? "bg-primary text-primary-foreground"
-                  : "text-foreground/70 hover:scale-110 hover:bg-primary/25 hover:text-primary-foreground",
+                  ? " border-primary text-foreground"
+                  : " border-background text-foreground/70 hover:border-foreground hover:text-foreground",
               )}
             >
               {page.name}

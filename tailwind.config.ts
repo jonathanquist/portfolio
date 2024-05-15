@@ -62,6 +62,9 @@ const config = {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+      dropShadow: {
+        white: "0 0 8px rgba(255, 255, 255, .5)",
+      },
       keyframes: {
         "accordion-down": {
           from: { height: "0" },

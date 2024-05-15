@@ -74,6 +74,14 @@
     @apply bg-background text-foreground;
   }
 
+  h1 {
+    @apply text-primary-foreground;
+  }
+
+  h2 {
+    @apply text-4xl;
+  }
+
   /* Scroll */
   body::-webkit-scrollbar,
   textarea::-webkit-scrollbar,

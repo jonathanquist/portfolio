@@ -7,7 +7,7 @@ const MenuRightSocial = () => {
     <div className="flex flex-col gap-1">
       <h2 className="hidden">Social media</h2>
       <p className="text-lg text-foreground/70">You can reach me at:</p>
-      <div className="flex gap-2 text-foreground">
+      <div className="flex gap-1 text-foreground">
         {social.map((item) => (
           <Hint key={item.link} label={item.tooltip}>
             <Link
@@ -16,7 +16,7 @@ const MenuRightSocial = () => {
               rel="noreferrer"
               aria-label={item.tooltip}
             >
-              <item.Icon className="h-5 w-5 opacity-70 transition-opacity duration-200 hover:opacity-100" />
+              <item.Icon className="h-7 w-7 rounded-sm border border-dashed border-background p-1 opacity-70 transition-opacity duration-200 hover:border-foreground hover:opacity-100" />
             </Link>
           </Hint>
         ))}
