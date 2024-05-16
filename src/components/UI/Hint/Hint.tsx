@@ -3,15 +3,16 @@ import {
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from './Tooltip';
+} from "./Tooltip";
 
 export interface HintProps {
   label: string;
   children: React.ReactNode;
-  side?: 'top' | 'bottom' | 'left' | 'right';
-  align?: 'start' | 'center' | 'end';
+  side?: "top" | "bottom" | "left" | "right";
+  align?: "start" | "center" | "end";
   sideOffset?: number;
   alignOffset?: number;
+  className?: string;
 }
 
 export const Hint = ({
@@ -21,6 +22,7 @@ export const Hint = ({
   align,
   sideOffset,
   alignOffset,
+  className,
 }: HintProps) => {
   return (
     <TooltipProvider>
@@ -31,8 +33,9 @@ export const Hint = ({
           align={align}
           sideOffset={sideOffset}
           alignOffset={alignOffset}
+          className={className}
         >
-          <p className="font-semibold capitalize pointer-events-none select-none">
+          <p className="pointer-events-none select-none font-semibold capitalize">
             {label}
           </p>
         </TooltipContent>

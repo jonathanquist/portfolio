@@ -10,9 +10,5 @@ export const metadata: Metadata = {
 };
 
 export default function Page({ params }: { params: { slug: string } }) {
-  return (
-    <div>
-      <Project slug={params.slug} />
-    </div>
-  );
+  return <Project slug={params.slug} />;
 }

@@ -12,6 +12,7 @@ interface ImgProps {
 interface ImageComponentProps extends Omit<ImageProps, "src"> {
   src: string | undefined;
   alt: string;
+  ref?: (el: HTMLImageElement | null) => void;
   className?: string;
 }
 
@@ -33,10 +34,14 @@ function Image({ children, alt, className }: ImgProps) {
     <ImageLoadContext.Provider
       value={[imageSuccessfullyLoaded, setImageSuccessfullyLoaded]}
     >
-      <Hint label={alt}>
+      <Hint
+        className="border-2 border-dashed border-secondary bg-background text-lg font-normal text-foreground"
+        sideOffset={10}
+        label={alt}
+      >
         <div
           className={cn(
-            "relative flex h-full items-center justify-center overflow-hidden rounded-md bg-neutral-200",
+            "relative flex h-full items-center justify-center overflow-hidden rounded-md shadow-xl",
             className,
           )}
         >
@@ -51,6 +56,7 @@ function ImageComponent({
   src,
   alt,
   className,
+  ref,
   ...props
 }: ImageComponentProps) {
   // Use the image load state from context
@@ -69,6 +75,7 @@ function ImageComponent({
       src={src}
       alt={alt}
       placeholder="empty"
+      ref={ref}
       onError={() => {
         setImageSuccessfullyLoaded(false);
       }}
