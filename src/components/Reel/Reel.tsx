@@ -47,7 +47,7 @@ const Reel = () => {
             visible[index] ? "opacity-100" : "translate-y-40 opacity-0",
           )}
         >
-          <Image alt={image.alt} className="w-fit bg-transparent">
+          <Image alt={image.alt} className="w-fit bg-transparent shadow-xl">
             <ImageComponent
               src={image.src}
               alt={image.alt}

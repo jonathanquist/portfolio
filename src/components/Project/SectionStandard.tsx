@@ -1,6 +1,7 @@
-import React from 'react';
-import CaseStudyImage from './CaseStudyImage';
-import { getSectionTitle } from './section.const';
+import React from "react";
+import CaseStudyImage from "./CaseStudyImage";
+import { getSectionTitle } from "./section.const";
+import { Separator } from "../UI";
 
 type ImageProps = {
   src: string;
@@ -28,22 +29,26 @@ const SectionStandard = ({ section, name }: SectionProps) => {
 
   return (
     <div id={name}>
-      <div className="flex">
-        <div>
-          <h2>{title.sectionName}</h2>
+      <div className="mb-16 mt-28 flex h-48 w-full items-center justify-center gap-6 rounded-xl bg-primary py-12">
+        <div className="w-64">
+          <h2 className="text-right text-5xl font-bold uppercase">
+            {title.sectionName}
+          </h2>
         </div>
-        <div>
-          <ul>
+        <Separator orientation="vertical" />
+        <div className="w-64">
+          <ul className="list-inside list-disc text-xl font-bold">
             {title.bullets.map((bullet, index) => (
               <li key={index}>{bullet}</li>
             ))}
           </ul>
         </div>
       </div>
-
-      {section.map((subsection, index) => (
-        <Subsection key={index} subsection={subsection} />
-      ))}
+      <div className="space-y-12">
+        {section.map((subsection, index) => (
+          <Subsection key={index} subsection={subsection} />
+        ))}
+      </div>
     </div>
   );
 };
@@ -56,20 +61,20 @@ const Subsection = ({ subsection }: { subsection: Subsection }) => {
   const image = src && alt && <CaseStudyImage src={src} alt={alt} />;
 
   if (image) {
-    if (position === 'before') {
+    if (position === "before") {
       content = [image, ...content];
-    } else if (position === 'middle' && text.length > 1) {
+    } else if (position === "middle" && text.length > 1) {
       content.splice(text.length / 2, 0, image);
-    } else if (position === 'after') {
+    } else if (position === "after") {
       content.push(image);
     }
   }
 
   return (
-    <div>
+    <div className="section space-y-6">
       <h3>{title}</h3>
       {content.map((item, index) => {
-        if (typeof item === 'string') {
+        if (typeof item === "string") {
           return <p key={index}>{item}</p>;
         } else {
           return <React.Fragment key={index}>{item}</React.Fragment>;

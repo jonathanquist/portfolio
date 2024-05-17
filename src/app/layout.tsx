@@ -21,8 +21,10 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <div className="custom-scroll h-screen w-full overflow-y-scroll">
-          <div className="flex w-full flex-col items-center justify-start">
-            <div className="w-full max-w-5xl px-12 py-12">{children}</div>
+          <div className="flex w-full flex-col items-start justify-start lg:items-center">
+            <div className="3xl:max-w-8xl w-full py-12 pl-12 pr-64 lg:max-w-2xl lg:px-12 xl:max-w-3xl 2xl:max-w-5xl">
+              {children}
+            </div>
           </div>
           <div className="fixed right-0 top-0 z-50 w-fit">
             <MenuRight />

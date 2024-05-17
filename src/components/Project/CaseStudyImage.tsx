@@ -6,7 +6,7 @@ type ImageProps = {
 };
 
 const CaseStudyImage = ({ src, alt }: ImageProps) => (
-  <div>
+  <div className="py-4">
     <Image alt={alt}>
       <ImageComponent
         src={src}

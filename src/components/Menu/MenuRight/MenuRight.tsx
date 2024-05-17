@@ -13,7 +13,7 @@ import MenuRightHomeButton from "./MenuRightHomeButton";
 
 const MenuRight = () => {
   return (
-    <div className="flex h-screen w-full flex-col items-start gap-6 py-12 pl-4 pr-8">
+    <div className="flex h-screen w-52 flex-col items-start gap-6 py-12 pl-4 pr-8">
       <MenuRightHomeButton />
       <Separator className="w-20" />
       <MenuRightSocial />

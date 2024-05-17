@@ -18,7 +18,7 @@ const MenuRightPages = () => {
                 "block w-24 rounded-md border-2 border-dashed px-3 py-1 text-lg font-bold uppercase tracking-wider transition",
                 path === page.path
                   ? " border-primary text-foreground"
-                  : " border-background text-foreground/70 hover:border-foreground hover:text-foreground",
+                  : " border-background text-foreground/70 hover:border-border hover:text-foreground",
               )}
             >
               {page.name}

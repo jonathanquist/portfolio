@@ -10,7 +10,11 @@ export default function AIChatButton() {
 
   return (
     <>
-      <Button onClick={() => setChatBoxOpen(true)} className="w-full">
+      <Button
+        variant="ghost"
+        onClick={() => setChatBoxOpen(true)}
+        className="fixed bottom-8 right-8 mt-auto flex h-20 w-20 flex-col items-center justify-center gap-0 rounded-full bg-primary shadow-md"
+      >
         <IconChat className="h-4 w-4" /> Chatbot
       </Button>
 

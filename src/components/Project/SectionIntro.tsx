@@ -1,5 +1,5 @@
 import React from "react";
-import { Image, ImageComponent, ImageFallback } from "../UI";
+import { Card, Image, ImageComponent, ImageFallback } from "../UI";
 import { CaseStudyProps } from "./Project";
 
 interface IntroProps {
@@ -27,22 +27,22 @@ const SectionIntro = ({ json }: IntroProps) => {
   }
 
   return (
-    <div id="intro">
-      <div className="flex">
-        <div>
-          <p>What</p>
+    <div id="intro" className="space-y-12">
+      <div className="flex justify-between">
+        <div className="w-1/4">
+          <p className="mb-2 font-bold">What</p>
           <p>{what}</p>
         </div>
-        <div>
-          <p>Why</p>
+        <div className="w-1/4">
+          <p className="mb-2 font-bold">Why</p>
           <p>{why}</p>
         </div>
-        <div>
-          <p>How</p>
+        <div className="w-1/4">
+          <p className="mb-2 font-bold">How</p>
           <p>{how}</p>
         </div>
       </div>
-      <div className="px-64">
+      <div className="">
         <Image alt={title}>
           <ImageComponent
             src={imgHero}
@@ -55,13 +55,23 @@ const SectionIntro = ({ json }: IntroProps) => {
           <ImageFallback>{slug}</ImageFallback>
         </Image>
       </div>
-      <div>
-        <h1>{title}</h1>
-        <h2 className="hidden">Intro</h2>
-        <p>{introText}</p>
-        <blockquote>{hypothesis}</blockquote>
-        <h3>My Role</h3>
-        <p>{role}</p>
+      <div className="section space-y-12">
+        <h1 className="text-center text-primary">
+          <span className="text-foreground">{title}</span>
+        </h1>
+        <div className="space-y-6">
+          <h2 className="hidden">Intro</h2>
+          <p>{introText}</p>
+        </div>
+        <Card className="flex flex-col gap-2 text-center text-3xl">
+          <span className="font-bold">Hypothesis</span>
+
+          {hypothesis}
+        </Card>
+        <div className="space-y-6">
+          <h3>My Role</h3>
+          <p>{role}</p>
+        </div>
       </div>
     </div>
   );

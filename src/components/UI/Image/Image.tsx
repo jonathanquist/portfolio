@@ -35,13 +35,13 @@ function Image({ children, alt, className }: ImgProps) {
       value={[imageSuccessfullyLoaded, setImageSuccessfullyLoaded]}
     >
       <Hint
-        className="border-2 border-dashed border-secondary bg-background text-lg font-normal text-foreground"
+        className="border-2 border-dashed border-border bg-background text-lg font-normal text-foreground"
         sideOffset={10}
         label={alt}
       >
         <div
           className={cn(
-            "relative flex h-full items-center justify-center overflow-hidden rounded-md shadow-xl",
+            "relative flex h-full items-center justify-center overflow-hidden rounded-md",
             className,
           )}
         >

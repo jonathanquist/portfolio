@@ -4,6 +4,7 @@ import MenuShortcut from "../Menu/MenuShortcut/MenuShortcut";
 import nrk1 from "../../lib/case-study/nrk-1.json";
 import SectionIntro from "./SectionIntro";
 import SectionStandard from "./SectionStandard";
+import SectionOutro from "./SectionOutro";
 
 const caseStudies = [nrk1];
 
@@ -28,21 +29,24 @@ const Project = ({ slug }: ProjectProps) => {
   } = currentProject;
 
   return (
-    <div className="flex w-full">
-      <div className="w-36">
+    <>
+      <div className="fixed left-8 top-1/2 hidden w-36 -translate-y-1/2 lg:block">
         <MenuShortcut />
       </div>
-      <div className="flex-1">
-        <SectionIntro json={currentProject} />
-        <SectionStandard
-          section={understandingUser}
-          name="understanding-user"
-        />
-        <SectionStandard section={startingDesign} name="starting-design" />
-        <SectionStandard section={refiningDesign} name="refining-design" />
-        <SectionStandard section={goingForward} name="going-forward" />
+      <div className="flex w-full">
+        <div className="flex-1">
+          <SectionIntro json={currentProject} />
+          <SectionStandard
+            section={understandingUser}
+            name="understanding-user"
+          />
+          <SectionStandard section={startingDesign} name="starting-design" />
+          <SectionStandard section={refiningDesign} name="refining-design" />
+          <SectionStandard section={goingForward} name="going-forward" />
+          <SectionOutro json={currentProject} />
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

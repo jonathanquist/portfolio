@@ -31,7 +31,7 @@ const ProjectList = () => {
                   grow={true}
                   className=" group bg-[url(/images/preview_reel.png)]"
                 >
-                  <p className="drop-shadow-white  text-foreground">
+                  <p className="text-foreground  drop-shadow-white">
                     {project.title}
                   </p>
                 </Button>
@@ -49,7 +49,7 @@ const ProjectList = () => {
                   backgroundImage: `url(${imgPrev})`,
                 }}
               >
-                <p className="drop-shadow-white text-foreground">
+                <p className="text-foreground drop-shadow-white">
                   {project.title}
                 </p>
               </Button>
