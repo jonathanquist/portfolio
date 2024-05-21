@@ -1,4 +1,4 @@
-import { SVGProps } from 'react';
+import { SVGProps } from "react";
 
 export function IconLink(props: SVGProps<SVGSVGElement>) {
   return (
@@ -10,8 +10,12 @@ export function IconLink(props: SVGProps<SVGSVGElement>) {
       {...props}
     >
       <path
-        d="M200.66 352H144a96 96 0 010-192h55.41M312.59 160H368a96 96 0 010 192h-56.66M169.07 256h175.86"
-        fill="currentColor"
+        d="M200.66 352H144a96 96 0 010-192h55.41M312.59 160H368a96 96 0 010 192h-56.66"
+        fill="none"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="48"
       />
     </svg>
   );

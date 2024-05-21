@@ -7,6 +7,7 @@ import Link from "next/link";
 import { useEffect, useRef } from "react";
 import ReactMarkdown from "react-markdown";
 import { IconChat, IconClose, IconSend, IconTrash } from "../Icons";
+import { Button } from "../UI";
 
 interface AIChatBoxProps {
   open: boolean;
@@ -51,14 +52,20 @@ export default function AIChatBox({ open, onClose }: AIChatBoxProps) {
         open ? "fixed" : "hidden",
       )}
     >
-      <button onClick={onClose} className="mb-1 ms-auto block">
-        <IconClose className="h-4 w-4" />
-      </button>
-      <div className="flex h-[600px] flex-col rounded border bg-background shadow-xl">
+      <div className="flex h-[600px] flex-col rounded border-2 border-dashed bg-background shadow-xl">
+        <Button
+          size="icon"
+          variant="ghost"
+          onClick={onClose}
+          className="mb-1 ms-auto block"
+        >
+          <IconClose className="h-4 w-4" />
+        </Button>
         <div ref={scrollRef} className="mt-3 h-full overflow-y-auto px-3">
           {messages.map((message, index) => (
             <ChatMessage key={message.id} message={message} />
           ))}
+
           {isLoading && lastMessageIsUser && (
             <ChatMessage
               message={{
@@ -68,6 +75,7 @@ export default function AIChatBox({ open, onClose }: AIChatBoxProps) {
               }}
             />
           )}
+
           {error && (
             <ChatMessage
               message={{
@@ -77,55 +85,63 @@ export default function AIChatBox({ open, onClose }: AIChatBoxProps) {
               }}
             />
           )}
+
           {!error && messages.length === 0 && (
             <div className="mx-8 flex h-full flex-col items-center justify-center gap-3 text-center">
-              <IconChat className="h-4 w-4" />
+              <IconChat className="h-16 w-16 text-foreground/25" />
               <p className="text-lg font-medium">
                 Send a message to start the AI chat!
               </p>
               <p>
-                You can ask the chatbot any question about me and it will find
-                me the relevant information on this website.
+                You can ask the chatbot any question about me and it will try
+                its best to answer based on what is available on this page.
               </p>
               <p className="text-sm text-muted-foreground">
-                PS: If you want to learn how to build your own AI chatbot, check
-                out the tutorial on the{" "}
-                <a
+                A heartfelt thanks to{" "}
+                <Link
                   href="https://www.youtube.com/c/codinginflow?sub_confirmation=1"
-                  className="text-primary hover:underline"
+                  className="font-bold text-primary hover:underline"
                 >
-                  Coding in Flow YouTube channel
-                </a>
+                  <span className="text-foreground">
+                    Coding in Flow YouTube channel
+                  </span>
+                </Link>{" "}
+                without which this would not have been possible.
               </p>
             </div>
           )}
         </div>
-        <form onSubmit={handleSubmit} className="m-3 flex gap-1">
-          <button
+
+        <form onSubmit={handleSubmit} className="m-3 flex items-center gap-1">
+          <Button
             type="button"
-            className="flex w-10 flex-none items-center justify-center"
+            size="icon"
+            variant="ghost"
+            className="text-foreground"
             title="Clear chat"
             onClick={() => setMessages([])}
           >
-            <IconTrash className="h-4 w-4" />
-          </button>
+            <IconTrash className="h-6 w-6" />
+          </Button>
           <input
             type="text"
             value={input}
             ref={inputRef}
             onChange={handleInputChange}
             placeholder="Say something..."
-            className="grow rounded border bg-background px-3 py-2"
+            className="grow rounded-md bg-secondary px-3 py-2 text-background placeholder:text-background/70 focus:outline-muted"
           />
-          <button
+          <Button
+            size="icon"
+            variant="ghost"
             type="submit"
-            className="flex w-10 flex-none items-center justify-center disabled:opacity-50"
+            className="text-foreground disabled:opacity-50"
             title="Submit"
             // disabled={isLoading || input.length === 0}
             disabled={input.length === 0 || input.trim() === ""}
           >
-            <IconSend className="h-4 w-4" />
-          </button>
+            <IconSend className="h-6 w-6" />
+          </Button>
         </form>
       </div>
     </div>
@@ -141,15 +157,17 @@ function ChatMessage({ message: { role, content } }: ChatMessageProps) {
   return (
     <div
       className={cn(
-        "mb-3 flex items-center",
+        "mb-3 flex items-center tracking-wide",
         isAiMessage ? "me-5 justify-start" : "ms-5 justify-end",
       )}
     >
-      {isAiMessage && <IconChat className="mr-2 h-4 w-4 flex-none" />}
+      {isAiMessage && (
+        <IconChat className="mr-2 h-4 w-4 flex-none text-secondary" />
+      )}
       <div
         className={cn(
-          "rounded-md border px-3 py-2",
-          isAiMessage ? "bg-background" : "bg-foreground text-background",
+          "rounded-md px-3 py-2",
+          isAiMessage ? "bg-primary" : "bg-secondary text-background",
         )}
       >
         <ReactMarkdown
@@ -158,8 +176,10 @@ function ChatMessage({ message: { role, content } }: ChatMessageProps) {
               <Link
                 {...props}
                 href={props.href ?? ""}
-                className="text-primary hover:underline"
-              />
+                className="font-bold text-primary hover:underline"
+              >
+                <span className="text-foreground" />
+              </Link>
             ),
             p: ({ node, ...props }) => (
               <p {...props} className="mt-3 first:mt-0" />

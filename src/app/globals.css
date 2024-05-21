@@ -94,6 +94,10 @@
     @apply text-2xl;
   }
 
+  .section strong {
+    @apply font-bold;
+  }
+
   /* Scroll */
   body::-webkit-scrollbar,
   textarea::-webkit-scrollbar,
