@@ -21,17 +21,21 @@ const ProjectList = () => {
   return (
     <div className="flex w-full flex-col items-center gap-10">
       <h2 className="uppercase">Projects</h2>
-      <div className="flex w-full gap-8">
+      <div className="flex w-full flex-col gap-8 xl:flex-row">
         {list.map((project) => {
           if (!project.file) {
             return (
-              <Link href={project.href} key={project.id} className="w-1/2">
+              <Link
+                href={project.href}
+                key={project.id}
+                className="w-full xl:w-1/2"
+              >
                 <Button
                   size="card"
                   grow={true}
-                  className=" group bg-[url(/images/preview_reel.png)]"
+                  className="bg-[url(/images/preview_reel.png)] bg-center"
                 >
-                  <p className="text-foreground  drop-shadow-white">
+                  <p className="text-wrap px-4 py-6 text-foreground drop-shadow-white">
                     {project.title}
                   </p>
                 </Button>
@@ -41,15 +45,20 @@ const ProjectList = () => {
 
           const { "img-preview": imgPrev } = project.file;
           return (
-            <Link href={project.href} key={project.id} className="w-1/2 ">
+            <Link
+              href={project.href}
+              key={project.id}
+              className="w-full xl:w-1/2"
+            >
               <Button
                 size="card"
                 grow={true}
                 style={{
                   backgroundImage: `url(${imgPrev})`,
                 }}
+                className="bg-center"
               >
-                <p className="text-foreground drop-shadow-white">
+                <p className="text-wrap px-4 py-6 text-foreground drop-shadow-white">
                   {project.title}
                 </p>
               </Button>

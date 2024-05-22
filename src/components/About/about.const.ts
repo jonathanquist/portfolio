@@ -30,7 +30,7 @@ export const aboutContent = [
   {
     contents: [
       `Thanks, for taking the time. Stay well!
-                <br />~ Jonathan`,
+      <br /><em>~ jonathan</em>`,
     ],
   },
 ];

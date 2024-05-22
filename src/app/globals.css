@@ -75,7 +75,7 @@
   }
 
   h1 {
-    @apply text-5xl text-primary-foreground underline;
+    @apply text-5xl leading-snug text-primary-foreground underline;
   }
 
   h2 {
@@ -83,15 +83,23 @@
   }
 
   h3 {
-    @apply text-3xl font-bold uppercase tracking-wide;
+    @apply text-4xl font-bold uppercase tracking-wide md:text-3xl;
+  }
+
+  em {
+    @apply font-caviar not-italic;
   }
 
   blockquote {
     @apply rounded-xl bg-secondary p-10 text-center text-3xl text-secondary-foreground;
   }
 
+  .section {
+    @apply px-8 md:px-0;
+  }
+
   .section p {
-    @apply text-2xl;
+    @apply text-2xl leading-snug md:leading-relaxed;
   }
 
   .section strong {
@@ -102,8 +110,9 @@
   body::-webkit-scrollbar,
   textarea::-webkit-scrollbar,
   .custom-scroll::-webkit-scrollbar {
-    @apply h-2.5 w-2.5;
+    @apply md:h-2.5 md:w-2.5;
   }
+
   body::-webkit-scrollbar-track,
   textarea::-webkit-scrollbar-track,
   .custom-scroll::-webkit-scrollbar-track {

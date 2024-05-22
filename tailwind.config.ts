@@ -13,12 +13,12 @@ const config = {
     container: {
       center: true,
       padding: "2rem",
+    },
+    extend: {
       screens: {
         "2xl": "1440px",
         "3xl": "1536px",
       },
-    },
-    extend: {
       fontFamily: {
         myriad: ["Myriad Condensed", "sans-serif"],
         caviar: ["Caviar Dreams", "sans-serif"],

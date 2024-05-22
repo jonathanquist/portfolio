@@ -1,5 +1,12 @@
 import React from "react";
-import { Button, Card, Image, ImageComponent, ImageFallback } from "../UI";
+import {
+  Button,
+  ButtonSpecial,
+  Card,
+  Image,
+  ImageComponent,
+  ImageFallback,
+} from "../UI";
 import { CaseStudyProps } from "./Project";
 import Link from "next/link";
 import { IconCoffee, IconFile, IconLink } from "../Icons";
@@ -22,25 +29,9 @@ const SectionOutro = ({ json }: IntroProps) => {
           For a more, please check out the linked resources below
         </p>
       </div>
-      <div className="flex justify-center gap-16 text-3xl">
-        <Link href={deck} className="flex flex-col items-center gap-2">
-          <Button
-            variant="ghost"
-            className="h-fit bg-background transition duration-200 hover:bg-primary"
-          >
-            <IconFile className="h-64 w-64 text-foreground" />
-          </Button>
-          <span className="text-foreground">Project Slide Deck</span>
-        </Link>
-        <Link href={prototype} className="flex flex-col items-center gap-2">
-          <Button
-            variant="ghost"
-            className="h-fit bg-background transition duration-200 hover:bg-primary"
-          >
-            <IconLink className="h-64 w-64 text-foreground" />
-          </Button>
-          <span className="text-foreground">Project Slide Deck</span>
-        </Link>
+      <div className="flex flex-col justify-center gap-8 md:flex-row md:gap-16">
+        <ButtonSpecial href={deck} Icon={IconFile} label="Project Slide Deck" />
+        <ButtonSpecial href={prototype} Icon={IconLink} label="Prototype" />
       </div>
       <div className="flex flex-col items-center">
         <p className="text-center text-muted">

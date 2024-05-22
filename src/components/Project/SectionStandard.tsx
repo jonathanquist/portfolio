@@ -29,22 +29,22 @@ const SectionStandard = ({ section, name }: SectionProps) => {
 
   return (
     <div id={name}>
-      <div className="mb-16 mt-28 flex h-48 w-full items-center justify-center gap-6 rounded-xl bg-primary py-12">
-        <div className="w-64">
-          <h2 className="text-right text-5xl font-bold uppercase">
+      <div className="mb-16 mt-28 flex h-40 w-full items-center justify-center gap-6 bg-primary px-6 py-8 md:h-48 md:rounded-xl md:py-12">
+        <div className="w-48 md:w-64">
+          <h2 className="text-right text-2xl font-bold uppercase md:text-5xl">
             {title.sectionName}
           </h2>
         </div>
         <Separator orientation="vertical" />
-        <div className="w-64">
-          <ul className="list-inside list-disc text-xl font-bold">
+        <div className="w-48 md:w-64">
+          <ul className="text-md list-inside list-disc font-bold md:text-xl">
             {title.bullets.map((bullet, index) => (
               <li key={index}>{bullet}</li>
             ))}
           </ul>
         </div>
       </div>
-      <div className="space-y-12">
+      <div className="space-y-20 md:space-y-12">
         {section.map((subsection, index) => (
           <Subsection key={index} subsection={subsection} />
         ))}

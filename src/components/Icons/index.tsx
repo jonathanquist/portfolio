@@ -1,6 +1,8 @@
 export * from "./subcomponents/IconChat";
 export * from "./subcomponents/IconClose";
+export * from "./subcomponents/IconCode";
 export * from "./subcomponents/IconCoffee";
+export * from "./subcomponents/IconEdit";
 export * from "./subcomponents/IconFile";
 export * from "./subcomponents/IconLink";
 export * from "./subcomponents/IconLogoGithub";
@@ -8,5 +10,7 @@ export * from "./subcomponents/IconLogoLinkedin";
 export * from "./subcomponents/IconLogoInstagram";
 export * from "./subcomponents/IconLogoTwitter";
 export * from "./subcomponents/IconMail";
+export * from "./subcomponents/IconOpen";
 export * from "./subcomponents/IconSend";
 export * from "./subcomponents/IconTrash";
+export * from "./subcomponents/IconUsers";

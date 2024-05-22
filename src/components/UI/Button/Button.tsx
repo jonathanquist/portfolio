@@ -25,7 +25,7 @@ const buttonVariants = cva(
         sm: "h-9 rounded-lg px-3",
         lg: "h-14 rounded-lg px-8 text-2xl",
         icon: "rounded-sm p-2 aspect-square h-fit w-fit",
-        card: "h-48 w-full bg-cover text-3xl hover:underline text-primary shadow-md",
+        card: "h-32 md:h-40 2xl:h-48 w-full bg-cover text-3xl hover:underline text-primary shadow-md",
       },
       grow: {
         false: "",

@@ -1,7 +1,8 @@
 "use client";
 
 import {
-  Button,
+  ButtonSpecial,
+  Card,
   Image,
   ImageComponent,
   ImageFallback,
@@ -17,8 +18,8 @@ const About = () => {
     <div>
       <h1 className="hidden">About me</h1>
       <h2 className="hidden">Photo</h2>
-      <div className="flex items-center justify-between gap-28">
-        <div className="relative h-auto w-3/5">
+      <div className="flex items-center justify-between gap-28 px-8 md:px-0">
+        <div className="relative h-auto w-full flex-1 xl:w-3/5">
           <Image alt="Jonathan Quist" className="bg-transparent">
             <ImageComponent
               src="/images/jonathan-quist.jpg"
@@ -50,13 +51,13 @@ const About = () => {
               <div className="space-y-4">
                 {section.isQuote
                   ? section.contents.map((content, index) => (
-                      <blockquote key={index}>
+                      <Card key={index}>
                         <p
                           dangerouslySetInnerHTML={{
                             __html: section.contents[index],
                           }}
                         />
-                      </blockquote>
+                      </Card>
                     ))
                   : section.contents.map((content, index) => (
                       <p
@@ -73,12 +74,12 @@ const About = () => {
         ))}
       </div>
       <h2 className="hidden">Resume</h2>
-      <div>
-        <Link href="/files/jonathan-quist_cv_en_2024.pdf" target="_blank">
-          <Button>
-            View Resume <IconLink className="h-5 w-5" />
-          </Button>
-        </Link>
+      <div className="flex justify-center px-8  md:justify-start md:p-0">
+        <ButtonSpecial
+          href="/files/jonathan-quist_cv_en_2024.pdf"
+          Icon={IconLink}
+          label="View Resume"
+        />
       </div>
     </div>
   );

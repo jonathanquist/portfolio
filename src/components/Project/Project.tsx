@@ -34,7 +34,7 @@ const Project = ({ slug }: ProjectProps) => {
         <MenuShortcut />
       </div>
       <div className="flex w-full">
-        <div className="flex-1">
+        <div className="w-full md:flex-1">
           <SectionIntro json={currentProject} />
           <SectionStandard
             section={understandingUser}

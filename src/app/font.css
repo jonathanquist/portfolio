@@ -8,9 +8,25 @@
 
 @font-face {
   font-family: "Myriad Condensed";
+  src: url("/fonts/MYRIADPRO-CONDIT.OTF") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Myriad Condensed";
   src: url("/fonts/MYRIADPRO-BOLDCOND.OTF") format("truetype");
   font-weight: 700;
   font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Myriad Condensed";
+  src: url("/fonts/MYRIADPRO-BOLDCONDIT.OTF") format("truetype");
+  font-weight: 700;
+  font-style: italic;
   font-display: swap;
 }
 
