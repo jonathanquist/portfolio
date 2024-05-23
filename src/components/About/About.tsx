@@ -18,7 +18,7 @@ const About = () => {
     <div>
       <h1 className="hidden">About me</h1>
       <h2 className="hidden">Photo</h2>
-      <div className="flex items-center justify-between gap-28 px-8 md:px-0">
+      <div className="flex items-center justify-between gap-8 px-8 md:gap-16 md:px-0 xl:gap-20 2xl:gap-28">
         <div className="relative h-auto w-full flex-1 xl:w-3/5">
           <Image alt="Jonathan Quist" className="bg-transparent">
             <ImageComponent
@@ -35,9 +35,9 @@ const About = () => {
         </div>
         <Separator
           orientation="vertical"
-          className="my-32 h-auto self-stretch"
+          className="my-14 h-auto self-stretch md:my-20 lg:my-28 xl:my-32"
         />
-        <div className="flex h-auto flex-1 items-center justify-center font-caviar text-3xl">
+        <div className="flex h-auto items-center justify-center font-caviar text-2xl md:text-3xl xl:flex-1">
           This is me, <br />
           jonathan
         </div>
@@ -48,7 +48,7 @@ const About = () => {
           <React.Fragment key={index}>
             <div className="space-y-6">
               {section.title && <h3>{section.title}</h3>}
-              <div className="space-y-4">
+              <div className="space-y-8">
                 {section.isQuote
                   ? section.contents.map((content, index) => (
                       <Card key={index}>

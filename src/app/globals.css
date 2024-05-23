@@ -103,7 +103,7 @@
   }
 
   .section strong {
-    @apply font-bold;
+    @apply rounded-md bg-primary px-1 py-0.5 font-bold text-primary-foreground;
   }
 
   /* Scroll */
