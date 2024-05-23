@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import Reel from "@/components/Reel/Reel";
+import Reel from "@/components/Pages/Reel/Reel";
 
 export const metadata: Metadata = {
   title: "Reel",

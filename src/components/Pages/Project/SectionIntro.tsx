@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Image, ImageComponent, ImageFallback } from "../UI";
+import { Card, Image, ImageComponent, ImageFallback } from "../../UI";
 import { CaseStudyProps } from "./Project";
 
 interface IntroProps {

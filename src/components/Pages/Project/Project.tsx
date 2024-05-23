@@ -1,7 +1,7 @@
 "use client";
 
-import MenuShortcut from "../Menu/MenuShortcut/MenuShortcut";
-import nrk1 from "../../lib/case-study/nrk-1.json";
+import MenuShortcut from "../../Menu/MenuShortcut/MenuShortcut";
+import nrk1 from "../../../lib/case-study/nrk-1.json";
 import SectionIntro from "./SectionIntro";
 import SectionStandard from "./SectionStandard";
 import SectionOutro from "./SectionOutro";

@@ -6,10 +6,10 @@ import {
   Image,
   ImageComponent,
   ImageFallback,
-} from "../UI";
+} from "../../UI";
 import { CaseStudyProps } from "./Project";
 import Link from "next/link";
-import { IconCoffee, IconFile, IconLink } from "../Icons";
+import { IconCoffee, IconFile, IconLink } from "../../Icons";
 
 interface IntroProps {
   json: CaseStudyProps;

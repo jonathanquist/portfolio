@@ -1,4 +1,4 @@
-import { Image, ImageComponent, ImageFallback } from "../UI";
+import { Image, ImageComponent, ImageFallback } from "../../UI";
 
 type ImageProps = {
   src: string;

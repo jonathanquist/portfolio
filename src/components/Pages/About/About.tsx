@@ -9,7 +9,7 @@ import {
   Separator,
 } from "@/components/UI";
 import Link from "next/link";
-import { IconLink } from "../Icons";
+import { IconLink } from "../../Icons";
 import { aboutContent } from "./about.const";
 import React from "react";
 

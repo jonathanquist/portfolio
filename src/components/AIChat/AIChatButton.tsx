@@ -12,7 +12,7 @@ export default function AIChatButton() {
     <>
       <Button
         variant="ghost"
-        onClick={() => setChatBoxOpen(true)}
+        onClick={() => setChatBoxOpen(!chatBoxOpen)}
         className="fixed bottom-8 right-8 mt-auto hidden h-20 w-20 flex-col items-center justify-center gap-0 rounded-full bg-primary shadow-md md:flex"
       >
         <IconChat className="h-4 w-4" /> Chatbot

@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { Button } from "../UI";
-import nrk1 from "../../lib/case-study/nrk-1.json";
+import { Button } from "../../UI";
+import nrk1 from "../../../lib/case-study/nrk-1.json";
 import Image from "next/image";
 
 const list = [

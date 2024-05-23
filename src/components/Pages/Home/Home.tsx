@@ -1,5 +1,11 @@
 import Link from "next/link";
-import { IconCode, IconCoffee, IconEdit, IconFile, IconUsers } from "../Icons";
+import {
+  IconCode,
+  IconCoffee,
+  IconEdit,
+  IconFile,
+  IconUsers,
+} from "../../Icons";
 import ProjectList from "./ProjectList";
 import { Button, Card, Separator } from "@/components/UI";
 

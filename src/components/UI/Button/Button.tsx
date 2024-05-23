@@ -29,7 +29,7 @@ const buttonVariants = cva(
       },
       grow: {
         false: "",
-        true: "transition duration-200 hover:scale-105",
+        true: "transition duration-200 hover:scale-105 hover:border-2 border-dashed border-border",
       },
     },
     defaultVariants: {

@@ -5,7 +5,7 @@ import { images } from "./images.const";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
-import { IconOpen } from "../Icons";
+import { IconOpen } from "../../Icons";
 
 const isTouchDevice = () => {
   if (typeof window !== "undefined") {

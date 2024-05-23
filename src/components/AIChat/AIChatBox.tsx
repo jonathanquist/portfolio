@@ -61,7 +61,10 @@ export default function AIChatBox({ open, onClose }: AIChatBoxProps) {
         >
           <IconClose className="h-4 w-4" />
         </Button>
-        <div ref={scrollRef} className="mt-3 h-full overflow-y-auto px-3">
+        <div
+          ref={scrollRef}
+          className="custom-scroll mt-3 h-full overflow-y-auto px-3"
+        >
           {messages.map((message, index) => (
             <ChatMessage key={message.id} message={message} />
           ))}

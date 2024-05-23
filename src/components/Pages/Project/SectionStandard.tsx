@@ -1,7 +1,7 @@
 import React from "react";
 import CaseStudyImage from "./CaseStudyImage";
 import { getSectionTitle } from "./section.const";
-import { Separator } from "../UI";
+import { Separator } from "../../UI";
 
 type ImageProps = {
   src: string;
