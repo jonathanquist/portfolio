@@ -11,9 +11,11 @@ export const metadata: Metadata = {
 
 // Return a list of `params` to populate the [slug] dynamic segment
 export async function generateStaticParams() {
-  const projects = await fetch("https://.../projects").then((res) =>
-    res.json(),
-  );
+  const projects = [
+    {
+      slug: "handy-website-for-a-horse-club-part-1",
+    },
+  ];
 
   return projects.map((projects: { slug: any }) => ({
     slug: projects.slug,
