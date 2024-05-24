@@ -92,6 +92,11 @@ jobs:
         run: pnpm --version
       - name: Check package.json
         run: cat package.json
+      - name: Check secrets
+        run: |
+          echo "ASTRA_DB_ENDPOINT: ${{ secrets.ASTRA_DB_ENDPOINT }}"
+          echo "ASTRA_DB_APPLICATION_TOKEN: ${{ secrets.ASTRA_DB_APPLICATION_TOKEN }}"
+          echo "ASTRA_DB_COLLECTION: ${{ secrets.ASTRA_DB_COLLECTION }}"
 
       - name: Build with Next.js
         run: pnpm run build
